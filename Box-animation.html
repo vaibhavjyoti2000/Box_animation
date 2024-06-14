@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box-Animation-Task</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #box {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        color: red;
+        /* margin: 10px; */
+        /* transition: all ease 0.5s; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: anim1 5s;
+        animation-iteration-count: 3;
+        animation-delay: 2s;
+      }
+      /* #box:hover {
+        background-color: red;
+        color: yellow;
+        /* border-radius: 50%; */
+      /* transform: scale(0.1); */
+      /* rotate: 150deg; */
+      /* transform: translateX(220px); */
+      /* transform: translateY(180px); */
+      /* transform: skew(-20deg); */
+      /* border-radius: 50%; */
+      /* } */
+
+      @keyframes anim1 {
+        0% {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+        25% {
+          position: relative;
+          top: 0;
+          left: 40%;
+          background-color: red;
+          rotate: 100deg;
+          opacity: 100%;
+        }
+        50% {
+          position: relative;
+          top: 400px;
+          left: 40%;
+          background-color: green;
+          rotate: 200deg;
+          opacity: 0;
+        }
+        75% {
+          position: relative;
+          top: 400px;
+          left: 0;
+          background-color: blue;
+          rotate: 300deg;
+        }
+        100% {
+          position: relative;
+          top: 0;
+          left: 0;
+          background-color: yellow;
+          rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Box</div>
+  </body>
+</html>
